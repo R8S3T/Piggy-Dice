@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="runningpig.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="points.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy Dice</title>
+</head>
+<body>
+    <!-- Top Section -->
+    <div class="top">
+            <!-- Pink Pig Start -->
+        <div class="pig-one">
+            <div class="head"></div>
+            <div class="foot-right"></div>
+            <div class="foot-left"></div>
+            <div class="eyes">
+                <div class="eye-right"></div><div class="dot"></div>
+                <div class="eye-left"></div><div class="dot"></div>
+            </div>
+            <div class="nose">
+                <div class="nostril-left"></div>
+                <div class="nostril-right"></div>
+            </div>
+            <div class="ears">
+                <div class="ear-left"></div>
+                <div class="ear-right"></div>
+            </div>
+        </div>
+        <!-- Brown Pig Start -->
+        <div class="side" id="pigs">
+            <div class="pig-two">
+                <div class="head-two"></div>
+                <div class="nose-two">
+                    <div class="nostril-two"></div>
+                </div>
+                <div class="eye">
+                    <div class="eye-two"></div><div class="dot-two"></div>
+                </div>
+                <div class="ears-two">
+                    <div class="ear-left-two"></div>
+                    <div class="ear-right-two"></div>
+                </div>
+                <div class="body"></div>
+                <div class="legs-two">
+                    <div class="leg-right-two"><div class="foot-one"></div></div>
+                    <div class="leg-left-two"><div class="foot-two"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- End Top Section -->
+
+        <!-- Instructions Section-->
+    <div class="instructions" id="combos">
+        <div class="combo1" id="standing">
+
+        </div>
+        <button onclick="startAnimation" id="start"></button>
+    </div>
+        <!-- End Instructions Section -->
+
+        <!-- Game Section -->
+    <div class="game">
+        <div class="sky">
+            <div class="sun"></div>
+            <div class="cloud"></div>
+        </div>
+        <div class="splash">
+            <div class="splatter0"></div>
+            <div class="splatter1"></div>
+            <div class="splatter2"></div>
+            <div class="splatter3"></div>
+            <div class="splatter4"></div>
+            <div class="splatter5"></div>
+        </div>
+        <div class="grass">
+            <div id="mud"></div>
+            <!-- Brown Pig running -->
+            <div class="pigs"></div>
+                <div id="brown-pig">
+                    <div class="go">
+                        <div class="size">
+                            <div class="pig-3">
+                                <div class="head-3"></div>
+                                <div class="nose-3">
+                                <div class="nostril-3"></div>
+                            </div>
+                            <div class="eyes-3">
+                                <div class="eye-3"></div><div class="dot-3"></div>
+                            </div>
+                            <div class="ears-3">
+                                <div class="ear-left-3"></div>
+                                <div class="ear-right-3"></div>
+                            </div>
+                            <div class="body-3"></div>
+                            <div class="legs-3">
+                                <div class="leg-right-3"><div class="foot-right-3"></div></div>
+                                <div class="leg-left-3"><div class="foot-left-3"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Brown Pig running -->
+                <div id="pinkPig">
+                    <div class="go-2">
+                        <div class="size">
+                            <div class="pig-4">
+                                <div class="head-4"></div>
+                                <div class="nose-4">
+                                    <div class="nostril-4"></div>
+                                </div>
+                                <div class="eyes-4">
+                                    <div class="eye-4"></div><div class="dot-4"></div>
+                                </div>
+                                <div class="ears-4">
+                                    <div class="ear-left-4"></div>
+                                    <div class="ear-right-4"></div>
+                                </div>
+                                <div class="body-4"></div>
+                                <div class="legs-4">
+                                    <div class="leg-right-4"><div class="foot-right-4"></div></div>
+                                    <div class="leg-left-4"><div class="foot-left-4"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
