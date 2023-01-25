@@ -1,9 +1,6 @@
+/* Start Button */
 
-
-/*Two standing pigs*/
-
-#standing {
-    transform: rotate(50deg);
-
+#start {
+    border-radius: 10%;
+    font-size: 1em;
 }
-

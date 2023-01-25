@@ -1,10 +1,15 @@
  /* Running pig */
 
-.size {
-    transform: scale(50%);
+ .size {
+    transform: scale(65%);
 }
 
-.pig-3 {
+#brown-pig {
+    position: relative;
+    left: 150px;
+}
+
+.pig-three {
     background-color: #854836;
     height: 130px;
     width: 190px;
@@ -14,7 +19,7 @@
     border-bottom-right-radius: 50%;
 }
 
-.pig-4 {
+.pig-four {
     background-color: #ffaaa5;
     height: 130px;
     width: 190px;
@@ -27,30 +32,14 @@
 .go {
     position: relative;
     left: 100px;
-    animation-name: move;
-    animation-duration: 7.4s;
-    animation-timing-function: linear;
 }
 
-.go-2 {
+.go-two {
     position: relative;
     left: 60px;
-    animation-name: move;
-    animation-duration: 7.4s;
-    animation-timing-function: linear;
-    animation-delay: 0.3s;
 }
 
-@keyframes move {
-    0% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(800px);
-    }
-  }
-
- .head-3, .head-4{
+ .head-three, .head-four{
     background-color: #854836;
     height: 130px;
     width: 160px;
@@ -61,11 +50,11 @@
     box-shadow: 1px 1px 1.5px -1px rgb(17, 17, 17);
 }
 
-.head-4 {
+.head-four {
     background-color: #ffaaa5;
 }
 
-.nose-3, .nose-4 {
+.nose-three, .nose-four {
     background-color: #854836;
     height: 50px;
     width: 50px;
@@ -79,11 +68,11 @@
     display: flex;
 }
 
-.nose-4 {
+.nose-four {
     background-color: #ffaaa5;
 }
 
-.nostril-3, .nostril-4 {
+.nostril-three, .nostril-four {
     height: 15px;
     width: 8px;
     border-top-left-radius: 80%;
@@ -94,14 +83,14 @@
     left: 41px;
 }
 
-.eyes-3, .eyes-4 {
+.eyes-three, .eyes-four {
     display: flex;
     position: absolute;
     top: -30px;
     left: 160px;
 }
 
-.eye-3, .eye-4 {
+.eye-three, .eye-four {
     background: white;
     border: 2px solid #45171d;
     height: 50px;
@@ -109,7 +98,7 @@
     border-radius: 100%;
 }
 
-.dot-3, .dot-4 {
+.dot-three, .dot-four {
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -119,19 +108,121 @@
     left: -35px;
 }
 
-.pig-3 {
-    animation-name: bounce, jump;
-    animation-duration: 0.5s, 3.5s;
-    animation-iteration-count: 10, 1;
-    animation-delay:0s, 4.5s;
+.ears-three, .ears-four {
+    display: flex;
+    position: relative;
 }
 
-.pig-4 {
-    animation-name: bounce-2, jump-2;
-    animation-duration: 0.5s, 3.5s;
-    animation-iteration-count: 10, 1;
-    animation-delay:0s, 4.5s;
+.ear-left-three, .ear-left-four {
+    background-color: #854836;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    top: -207px;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    transform: rotate(50deg);
+    box-shadow: -4px -1px 2px -2px black;
+    position: absolute;
+
 }
+
+.ear-right-three, .ear-right-four {
+    background-color: #854836;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    top: -205px;
+    left: 119px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-50deg);
+    z-index: -1;
+    position: absolute;
+}
+
+.ear-left-four, .ear-right-four {
+    background-color: #ffaaa5;
+}
+
+.legs-three, .legs-four {
+    display: flex;
+    position: absolute;
+}
+
+.leg-right-three, .leg-left-three, .leg-right-four, .leg-left-four {
+    background-color: #854836;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.leg-right-four, .leg-left-four {
+    background-color: #ffaaa5;
+}
+
+.leg-right-three, .leg-right-four {
+    left: 110px;
+    top: -25px;
+}
+
+.leg-left-three, .leg-left-four {
+    left: 0px;
+    top: -25px;
+}
+
+.foot-right-three, .foot-left-three, .foot-right-four, .foot-left-four {
+    height: 15px;
+    width: 40px;
+    background-color: #45171d;
+    position: relative;
+    border-bottom-right-radius: 10%;
+    top: 35px;
+}
+
+
+/* Left hand part of tail */
+.body-three::before, .body-four::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 20px;
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 5px 2px 0px 0px #854836;
+    transform: rotate(95deg);
+  }
+  
+  /* Right hand part of tail */
+  .body-three::after, .body-four::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -18px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: -3px -1px 0px 0px #854836;
+    transform: rotate(45deg);
+  }
+
+/* Keyframes animation, started in app.js */
+
+@keyframes move {
+    from {left: 5%;}
+    to {left: 50%;}
+  }
+
+@keyframes move-two {
+    from {left: 5%;}
+    to {left: 50%;}
+  }
 
 @keyframes bounce {
 	0%, 20%, 30%, 40%, 50%, 60%, 90%, 100% {transform: translateY(0);}
@@ -141,7 +232,7 @@
     85% {transform: translateY(10px);}
 }
 
-@keyframes bounce-2 {
+@keyframes bounce-two {
 	0%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 80%, 100% 
     {transform: translateY(0);}
 	60% {transform: translateY(-10px) rotate(-10deg);}
@@ -164,7 +255,7 @@
     90% {transform: translateY(-150px) rotate(80deg);}
 }
 
-@keyframes jump-2 {
+@keyframes jump-two {
 	0%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 80%, 100% {transform: translateY(1);}
 	40% {transform: translateY(-300px);}
     60% {transform: translateY(-300px) rotate(15deg);}
@@ -178,52 +269,10 @@
     90% {transform: translateY(-150px) rotate(80deg);}
 }
 
-.ears-3, .ears-4 {
-    display: flex;
-    position: relative;
-}
-
-.ear-left-3, .ear-left-4 {
-    background-color: #854836;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    top: -207px;
-    width: 50px;
-    height: 50px;
-    left: 150px;
-    transform: rotate(50deg);
-    animation:
-    running-ear-left 0.5s 10;
-
-    box-shadow: -4px -1px 2px -2px black;
-    position: absolute;
-
-}
-
 @keyframes running-ear-left {
     50%{
         transform: rotate(90deg);
     }
-}
-.ear-right-3, .ear-right-4 {
-    background-color: #854836;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    top: -205px;
-    left: 119px;
-    width: 50px;
-    height: 50px;
-    transform: rotate(-50deg);
-    z-index: -1;
-    animation:
-    running-ear-right 0.5s 10;
-    position: absolute;
-}
-
-.ear-left-4, .ear-right-4 {
-    background-color: #ffaaa5;
 }
 
 @keyframes running-ear-right {
@@ -232,36 +281,10 @@
     }
 }
 
-.legs-3, .legs-4 {
-    display: flex;
-    position: absolute;
-}
-
-.leg-right-3, .leg-left-3, .leg-right-4, .leg-left-4 {
-    background-color: #854836;
-    height: 40px;
-    width: 40px;
-    position: relative;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-}
-
-.leg-right-4, .leg-left-4 {
-    background-color: #ffaaa5;
-}
-.leg-right-3, .leg-right-4 {
-    animation: run-right 0.5s 10;
-}
 @keyframes run-right {
     50%{
         transform: rotate(-30deg);
     }
-}
-
-.leg-left-3, .leg-left-4 {
-    animation: run-left 0.5s 10;
 }
 
 @keyframes run-left {
@@ -269,49 +292,3 @@
         transform: rotate(30deg);
     }
 }
-
-.leg-right-3, .leg-right-4 {
-    left: 110px;
-    top: -25px;
-}
-
-.leg-left-3, .leg-left-4 {
-    left: 0px;
-    top: -25px;
-}
-
-.foot-right-3, .foot-left-3, .foot-right-4, .foot-left-4 {
-    height: 15px;
-    width: 40px;
-    background-color: #45171d;
-    position: relative;
-    border-bottom-right-radius: 10%;
-    top: 35px;
-}
-
-
-/* Left hand part of tail */
-.body-3::before, .body-4::before {
-    content: '';
-    position: absolute;
-    left: -16px;
-    top: 20px;
-    width: 20px;
-    height: 25px;
-    border-radius: 50%;
-    box-shadow: 5px 2px 0px 0px #854836;
-    transform: rotate(95deg);
-  }
-  
-  /* Right hand part of tail */
-  .body-3::after, .body-4::after {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: -18px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: -3px -1px 0px 0px #854836;
-    transform: rotate(45deg);
-  }
