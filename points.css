@@ -1,6 +1,44 @@
 /* Start Button */
 
+.container-points {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+ }
+
+/*  .col-3 {
+    height: 10em;
+    width: 10em;
+    margin-top: 6em;
+ } */
 #start {
     border-radius: 10%;
     font-size: 1em;
 }
+
+
+.nose-down {
+    transform: rotate(50deg);
+}
+
+.on-back {
+    transform: rotate(210deg);
+    right: -5em;
+}
+
+.scaled {
+    transform: scale(60%);
+}
+.sitting {
+    background-color: #854836;
+}
+
+.points {
+    position: absolute;
+    top: 0.65em;
+    left: 0.7em;
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
+  }

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="runningpig.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="points.css">
+    <title>Piggy Dice</title>
+</head>
+<body>
+        <!-- Instructions Section-->
+        <h2 class="game">Spielregeln</h2>
+        <div class="container-points">
+                <!--Points for brown pig-->
+            <div id="pig0" class="col-3 standing">
+                <div class="body body-brown">
+                    <span class="points">0</span>
+                    <div class="head head-brown"></div>
+                    <div class="nose nose-brown">
+                        <div class="nostril"></div>
+                    </div>
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ears ears-brown">
+                        <div class="ear-left ear-left-brown"></div>
+                        <div class="ear-right ear-right-brown"></div>
+                    </div>
+                    <div class="tail"></div>
+                    <div class="legs">
+                        <div class="leg-front leg-front-brown"><div class="foot-front"></div></div>
+                        <div class="leg-back leg-back-brown"><div class="foot-back"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig1" class="col-3">
+                <div class="body body-brown nose-down">
+                    <span class="points">2</span>
+                    <div class="head head-brown"></div>
+                    <div class="nose nose-brown">
+                        <div class="nostril"></div>
+                    </div>
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ears ears-brown">
+                        <div class="ear-left ear-left-brown"></div>
+                        <div class="ear-right ear-right-brown"></div>
+                    </div>
+                    <div class="tail"></div>
+                    <div class="legs">
+                        <div class="leg-front leg-front-brown"><div class="foot-front"></div></div>
+                        <div class="leg-back leg-back-brown"><div class="foot-back"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig2" class="col-3">
+                <div class="body body-brown on-back">
+                    <span class="points">5</span>
+                    <div class="head head-brown"></div>
+                    <div class="nose nose-brown">
+                        <div class="nostril"></div>
+                    </div>
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ears ears-brown">
+                        <div class="ear-left ear-left-brown"></div>
+                        <div class="ear-right ear-right-brown"></div>
+                    </div>
+                    <div class="tail"></div>
+                    <div class="legs">
+                        <div class="leg-front leg-front-brown"><div class="foot-front"></div></div>
+                        <div class="leg-back leg-back-brown"><div class="foot-back"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig3" class="col-3">
+                <div class="top-body-pink sitting">
+                    <span class="points">10</span>
+                    <div class="top-head-pink sitting">
+                        <div class="top-ear-left-pink sitting"></div>
+                        <div class="top-ear-right-pink sitting"></div>
+                        <div class="top-eyes-pink">
+                            <div class="top-eye-right"></div>
+                            <div class="top-dot-pink"></div>
+                            <div class="top-eye-left"></div>
+                            <div class="top-dot-pink"></div>
+                        </div>
+                        <div class="top-nose-pink sitting">
+                            <div class="top-nostril"></div>
+                            <div class="top-nostril"></div>
+                        </div>
+                        <div class="top-foot foot-right"></div>
+                        <div class="top-foot foot-left"></div>
+                    </div>
+                </div>
+            </div>
+    
+        <!--Points for pink pig-->
+            <div id="pig4" class="col-3 standing-pink">
+                <div class="go-pink">
+                    <div class="body body-pink">
+                        <span class="points">1</span>
+                        <div class="head head-pink"></div>
+                        <div class="nose nose-pink">
+                            <div class="nostril"></div>
+                        </div>
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ears ears-pink">
+                            <div class="ear-left ear-left-pink"></div>
+                            <div class="ear-right ear-right-pink"></div>
+                        </div>
+                        <div class="tail"></div>
+                        <div class="legs">
+                            <div class="leg-front leg-front-pink">
+                                <div class="foot-front">
+                                </div></div>
+                            <div class="leg-back leg-back-pink"><div class="foot-back"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig5" class="col-3">
+                <div class="body body-pink on-back">
+                    <span class="points">8</span>
+                    <div class="head head-pink"></div>
+                    <div class="nose nose-pink">
+                        <div class="nostril"></div>
+                    </div>
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ears ears-pink">
+                        <div class="ear-left ear-left-pink"></div>
+                        <div class="ear-right ear-right-pink"></div>
+                    </div>
+                    <div class="tail"></div>
+                    <div class="legs">
+                        <div class="leg-front leg-front-pink">
+                            <div class="foot-front">
+                            </div></div>
+                        <div class="leg-back leg-back-pink"><div class="foot-back"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig6" class="col-3">
+                <div class="top-body-pink">
+                    <span class="points">15</span>
+                    <div class="top-head-pink">
+                        <div class="top-ear-left-pink"></div>
+                        <div class="top-ear-right-pink"></div>
+                        <div class="top-eyes-pink">
+                            <div class="top-eye-right"></div>
+                            <div class="top-dot-pink"></div>
+                            <div class="top-eye-left"></div>
+                            <div class="top-dot-pink"></div>
+                        </div>
+                        <div class="top-nose-pink">
+                            <div class="top-nostril"></div>
+                            <div class="top-nostril"></div>
+                        </div>
+                        <div class="top-foot foot-right"></div>
+                        <div class="top-foot foot-left"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="pig7" class="col-3">
+                <div class="body body-pink nose-down">
+                    <span class="points">4</span>
+                    <div class="head head-pink"></div>
+                    <div class="nose nose-pink">
+                        <div class="nostril"></div>
+                    </div>
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ears ears-pink">
+                        <div class="ear-left ear-left-pink"></div>
+                        <div class="ear-right ear-right-pink"></div>
+                    </div>
+                    <div class="tail"></div>
+                    <div class="legs">
+                        <div class="leg-front leg-front-pink">
+                            <div class="foot-front">
+                            </div></div>
+                        <div class="leg-back leg-back-pink"><div class="foot-back"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="game">
+        <div class="row-game">
+            <div class="sky">
+                <div class="sun"></div>
+                <div class="cloud"></div>
+            </div>
+        </div>
+        <div class="grass">
+            <div class="container-midsection">
+                <div class="instructions">
+                    <button id="start">Start</button>
+                </div>
+            </div>
+                <!-- Brown Pig running -->
+            <div id="gamePigBrown">
+                <div class="go-brown go-brown-ani">
+                    <div class="body body-brown body-brown-ani">
+                        <div class="head head-brown"></div>
+                        <div class="nose nose-brown">
+                            <div class="nostril"></div>
+                        </div>
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ears ears-brown">
+                            <div class="ear-left ear-left-brown ear-left-brown-ani"></div>
+                            <div class="ear-right ear-right-brown ear-right-brown-ani"></div>
+                        </div>
+                        <div class="tail"></div>
+                        <div class="legs">
+                            <div class="leg-front leg-front-brown leg-front-brown-ani"><div class="foot-front"></div></div>
+                            <div class="leg-back leg-back-brown leg-back-brown-ani"><div class="foot-back"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pink Pig running -->
+            <div id="gamePigPink">
+                <div class="go-pink go-pink-ani">
+                    <div class="body body-pink body-pink-ani">
+                        <div class="head head-pink"></div>
+                        <div class="nose nose-pink">
+                            <div class="nostril"></div>
+                        </div>
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ears ears-pink">
+                            <div class="ear-left ear-left-pink ear-left-pink-ani"></div>
+                            <div class="ear-right ear-right-pink ear-right-pink-ani"></div>
+                        </div>
+                        <div class="tail"></div>
+                        <div class="legs">
+                            <div class="leg-front leg-front-pink leg-front-pink-ani">
+                                <div class="foot-front">
+                                </div></div>
+                            <div class="leg-back leg-back-pink leg-back-pink-ani"><div class="foot-back"></div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="puddle">
+                <div class="mud">
+                    <div class="mud-one"></div>
+                    <div class="mud-two"></div>
+                </div>
+                <div class="splash">
+                    <div class="splatter0"></div>
+                    <div class="splatter1"></div>
+                    <div class="splatter2"></div>
+                    <div class="splatter3"></div>
+                    <div class="splatter4"></div>
+                    <div class="splatter5"></div>
+                    <div class="splatter6"></div>
+                    <div class="splatter7"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

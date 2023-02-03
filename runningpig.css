@@ -4,157 +4,171 @@
     transform: scale(65%);
 }
 
-#brown-pig {
+#gamePigBrown{
     position: relative;
     left: 150px;
 }
 
-.pig-three {
+.body {
+    height: 5em;
+    width: 6.1em;
+    justify-items: stretch;
+    position: relative;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+}
+
+.body-brown {
     background-color: #854836;
-    height: 130px;
-    width: 190px;
-    border-top-left-radius: 40%;
-    border-top-right-radius: 30%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
 }
 
-.pig-four {
+.body-pink {
     background-color: #ffaaa5;
-    height: 130px;
-    width: 190px;
-    border-top-left-radius: 40%;
-    border-top-right-radius: 30%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
 }
 
-.go {
+.go-brown {
     position: relative;
     left: 100px;
 }
 
-.go-two {
+.go-pink {
     position: relative;
     left: 60px;
 }
 
- .head-three, .head-four{
+ .head {
     background-color: #854836;
-    height: 130px;
-    width: 160px;
-    position: relative;
-    top: -50px;
-    left: 70px;
+    height: 4.8em;
+    width: 5.5em;
+    position: inherit;
+    top: -2em;
+    left: 2.8em;
     border-radius: 50%;
-    box-shadow: 1px 1px 1.5px -1px rgb(17, 17, 17);
+    box-shadow: 0.0626em 0.0626em 0.0937em -0.0626em rgb(17, 17, 17);
 }
 
-.head-four {
+.head-brown {
+    background-color: #854836;
+}
+.head-pink {
     background-color: #ffaaa5;
 }
 
-.nose-three, .nose-four {
-    background-color: #854836;
-    height: 50px;
-    width: 50px;
+.nose{
+    height: 2.1em;
+    width: 1.1em;
     border-top: -30%;
     border-top-right-radius: 25%;
     border-bottom-right-radius: 25%;
     transform: rotate(-10deg);
     position: absolute;
-    top: -10px;
-    left: 200px;
+    top: -0.6em;
+    left: 7.8em;
     display: flex;
 }
 
-.nose-four {
+.nose-brown {
+    background-color: #854836;
+}
+.nose-pink {
     background-color: #ffaaa5;
 }
 
-.nostril-three, .nostril-four {
-    height: 15px;
-    width: 8px;
+.nostril{
+    height: 0.8em;
+    width: 0.3em;
     border-top-left-radius: 80%;
     border-bottom-left-radius: 90%;
     background-color: #45171d;
     position: relative;
-    top: 15px;
-    left: 41px;
+    top: 0.55em;
+    left: 0.8em;
 }
 
-.eyes-three, .eyes-four {
+.eyes {
+    background: white;
+    border: 0.12em solid #45171d;
+    height: 1.8em;
+    width: 1.6em;
+    border-radius: 100%;
     display: flex;
     position: absolute;
-    top: -30px;
-    left: 160px;
+    top: -0.8em;
+    left: 5.7em;
 }
 
-.eye-three, .eye-four {
+/* .eye {
     background: white;
     border: 2px solid #45171d;
-    height: 50px;
-    width: 45px;
+    height: 1.8;
+    width: 1.2;
     border-radius: 100%;
-}
+} */
 
-.dot-three, .dot-four {
-    height: 30px;
-    width: 30px;
+.dot {
+    height: 1em;
+    width: 1em;
     border-radius: 100%;
     position: relative;
     background: #45171d;
-    top: 15px;
-    left: -35px;
+    top: 0.5em;
+    left: 0.5em;
 }
 
-.ears-three, .ears-four {
+.ears {
     display: flex;
     position: relative;
 }
 
-.ear-left-three, .ear-left-four {
-    background-color: #854836;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    top: -207px;
-    width: 50px;
-    height: 50px;
-    left: 150px;
-    transform: rotate(50deg);
-    box-shadow: -4px -1px 2px -2px black;
-    position: absolute;
-
-}
-
-.ear-right-three, .ear-right-four {
-    background-color: #854836;
+.ear-right {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    top: -205px;
-    left: 119px;
-    width: 50px;
-    height: 50px;
+    top: -7.8em;
+    width: 2.1em;
+    height: 2.1em;
+    left: 2.5em;
     transform: rotate(-50deg);
     z-index: -1;
-    position: absolute;
+    box-shadow: -0.0625em -0.1875em  0.125em -0.125em black;
+    position: relative;
+}
+.ear-left {
+    background-color: black;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    top: -7.8em;
+    width: 2.1em;
+    height: 2.1em;
+    left: 5.3em;
+    transform: rotate(65deg);
+    box-shadow: -0.25em -0.0625em 0.125em  -0.125em black;
+    position: relative;
+
 }
 
-.ear-left-four, .ear-right-four {
+
+.ear-left-pink, .ear-right-pink {
     background-color: #ffaaa5;
 }
 
-.legs-three, .legs-four {
+.ear-left-brown, .ear-right-brown {
+    background-color: #854836;
+}
+
+.legs {
     display: flex;
     position: absolute;
 }
 
-.leg-right-three, .leg-left-three, .leg-right-four, .leg-left-four {
+.leg-front, .leg-back {
     background-color: #854836;
-    height: 40px;
-    width: 40px;
+    height: 1.3em;
+    width: 1.3em;
     position: relative;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -162,32 +176,37 @@
     border-bottom-right-radius: 10%;
 }
 
-.leg-right-four, .leg-left-four {
+.leg-front-pink, .leg-back-pink {
     background-color: #ffaaa5;
 }
 
-.leg-right-three, .leg-right-four {
-    left: 110px;
-    top: -25px;
+.leg-front-brown, 
+.leg-back-brown {
+    background-color: #854836;
 }
 
-.leg-left-three, .leg-left-four {
-    left: 0px;
-    top: -25px;
+.leg-front {
+    left: 3.2em;
+    top: -2.75em;
 }
 
-.foot-right-three, .foot-left-three, .foot-right-four, .foot-left-four {
-    height: 15px;
-    width: 40px;
+.leg-back {
+    left: 0.1em;
+    top: -2.75em;
+}
+
+.foot-front, .foot-back {
+    height: 0.4em;
+    width: 1.3em;
     background-color: #45171d;
     position: relative;
     border-bottom-right-radius: 10%;
-    top: 35px;
+    top: 1.2em;
 }
 
 
 /* Left hand part of tail */
-.body-three::before, .body-four::before {
+.tail::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -200,7 +219,7 @@
   }
   
   /* Right hand part of tail */
-  .body-three::after, .body-four::after {
+  .tail::after {
     content: '';
     position: absolute;
     top: 30px;
