@@ -1,3 +1,7 @@
+.body-game {
+    overflow: hidden;
+} 
+ 
  /* Running pig */
 
  .size {
@@ -6,13 +10,17 @@
 
 #gamePigBrown{
     position: relative;
-    left: 150px;
+    left: 11em;
+}
+
+#gamePigPink{
+    position: relative;
+    left: 9em;
 }
 
 .body {
     height: 5em;
     width: 6.1em;
-    justify-items: stretch;
     position: relative;
     border-top-left-radius: 40%;
     border-top-right-radius: 30%;
@@ -31,12 +39,10 @@
 
 .go-brown {
     position: relative;
-    left: 100px;
 }
 
 .go-pink {
     position: relative;
-    left: 60px;
 }
 
  .head {
@@ -100,14 +106,6 @@
     left: 5.7em;
 }
 
-/* .eye {
-    background: white;
-    border: 2px solid #45171d;
-    height: 1.8;
-    width: 1.2;
-    border-radius: 100%;
-} */
-
 .dot {
     height: 1em;
     width: 1em;
@@ -148,9 +146,7 @@
     transform: rotate(65deg);
     box-shadow: -0.25em -0.0625em 0.125em  -0.125em black;
     position: relative;
-
 }
-
 
 .ear-left-pink, .ear-right-pink {
     background-color: #ffaaa5;
@@ -203,7 +199,6 @@
     border-bottom-right-radius: 10%;
     top: 1.2em;
 }
-
 
 /* Left hand part of tail */
 .tail::before {
@@ -311,3 +306,103 @@
         transform: rotate(30deg);
     }
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #e7eaf6;
+    text-align: center;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: .5em;
+    width: 35%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+#player-name {
+    height: 3em;
+    width: 10em;
+    margin: 1em;
+    border: none;
+    
+}
+
+#btn-enter {
+    display: none;
+}
+
+#start {
+    background-color: #ffaaa5;
+    height: 3.5em;
+    width: 3.5em;
+    border: 0.0999em solid #45171d;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query for Tablets Ipads portrait mode */
+/* @media (min-width: 768px) and (max-width: 1024px){
+    #game, .puddle {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+} */
+  
+/* Media Query for Laptops and Desktops */
+/* @media (min-width: 1025px) and (max-width: 1280px){
+    #game {
+        transform: scale(85%);
+    }
+} */
+  
+/* Media Query for Large screens */
+/* @media (min-width: 1281px) {
+    #game {
+        transform: scale(100%);
+    }
+}
+ */

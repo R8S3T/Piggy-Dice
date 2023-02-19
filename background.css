@@ -1,26 +1,22 @@
-body {
-  overflow: auto;
+html, body {
+  overflow: hidden;
 }
-.row {
+
+/* .row {
   display: flex;
   padding: 0 2em 0 2em;
-}
-/*Instructions section*/
-
-.container-midsection {
-  background-color: #e7eaf6;
-}
+} */
 
 .game {
   text-align: center;
-  margin-top: 5em;
+  display: flex;
 }
-
+ 
 /*Landscape and puddle of mud*/
 .sky {
     background-color: #8dc6ff;
-    height: 21em;
-    width: auto;
+    height: 40vh;
+    width: 100%;
 }
 
 .sun {
@@ -29,7 +25,7 @@ body {
     height:6.25em;
     width:6.25em;
     margin-left: 12.5em;
-    margin-top: 3.125em;
+    margin-bottom: 2.125em;
     background:#facf5a;
     box-shadow: 0 0 0.625em #facf5a,
                   0 0 3.75em #facf5a,
@@ -46,7 +42,7 @@ body {
   height:6.25em; 
   border-radius:50%;
   position:relative;
-  top:5em;
+  top: 3em;
   -webkit-filter: blur(0.375em);
   animation: 45000ms cloudAnimation linear infinite;
   opacity:0.76;
@@ -87,16 +83,17 @@ body {
 
 .grass {
     background-color: #2c786c;
-    height: 25em;
-    width: auto;
+    height: 60vh;
+    width: 100vw;
 }
 
 /*Puddle of Mud*/
 
 .puddle {
   float: right;
-}
+  position: inherit;
 
+}
 
 .mud {
     background-color: #402a23;
@@ -272,3 +269,35 @@ body {
   left: 1.25em;
   transform: rotate(150deg);
 }
+
+/* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 768px) and (max-width: 1024px){
+    .sun,
+    #gamePigBrown, 
+    #gamePigPink {
+      transform: scale(70%);
+    }
+    .puddle {
+      position: relative;
+      top: -5.5em;
+      left: 5.5em;
+      transform: scale(70%);
+    }
+    #gamePigBrown, 
+    #gamePigPink {
+      left: -2em;
+    }
+
+    .splash {
+      top: -26em;
+    }
+
+    .cloud, .cloud:before {
+      height: 5.25em;
+      width: 5.25em;
+    }
+    .cloud:after {
+      width:10.5em;
+      height:5.25em; 
+    }
+} 

@@ -20,26 +20,6 @@ const legRightPink = document.querySelector('.leg-front-pink-ani');
 const splash = document.querySelector('.splash')
 
 
-// Select elements for points
-const pig0 = document.querySelector('#pig0');
-const pig1 = document.querySelector('#pig1');
-const pig2 = document.querySelector('#pig2');
-const pig3 = document.querySelector('#pig3');
-const pig4 = document.querySelector('#pig4');
-const pig5 = document.querySelector('#pig5');
-const pig6 = document.querySelector('#pig6');
-const pig7 = document.querySelector('#pig7');
-
-
-// List of pig points (pink and brown)
-const pointsBrownPig = [pig0, pig1, pig2, pig3];
-const pointsPinkPig = [pig4, pig5, pig6, pig7];
-
-//Random choice from both lists
-let randomBrownPig = Math.floor(Math.random() *4);
-let randomPinkPig = Math.floor(Math.random() *4);
-
-
 // Start animation on button click
 button.addEventListener('click', function(e) {
   e.preventDefault();
@@ -62,28 +42,54 @@ button.addEventListener('click', function(e) {
   legRightPink.style.animation = "run-right 0.5s 10";
   splash.style.animation = "fadeInOut 4.2s 6.8s";
   
-  //Create clone from random choice
-let randomCloneBrown = pointsBrownPig[randomBrownPig].cloneNode(true);
-randomCloneBrown.style.margin = '-3em 0 0 0';
 
-let randomClonePink = pointsPinkPig[randomPinkPig].cloneNode(true);
-randomClonePink.style.margin = '-13em 50em 0 2em';
+// Function to fetch content from instructions.html and clone pigs into game.html
+function cloneOneElement() {
+  fetch('instructions.html')
+    .then(response => response.text())
+    .then(data => {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(data, "text/html");
 
-const mudOne= document.querySelector('.mud-one');
-const parentOne = mudOne.parentNode;
+      // Select the elements to be cloned from the fetched HTML content
+      var originalPigBrown = doc.querySelectorAll('.col-3-brown');
+      var originalPigPink = doc.querySelectorAll('.col-3-pink');
 
-//Make cloned pigs appear after 7s
-setTimeout(() => {
-  parentOne.replaceChild(randomCloneBrown, mudOne);
-  randomCloneBrown.appendChild(randomClonePink);
-  randomCloneBrown.style.visibility = 'hidden';
-}, 7000);
+      // Convert the NodeList to an array so we can use the array methods
+      originalPigBrown = Array.from(originalPigBrown);
+      originalPigPink = Array.from(originalPigPink);
+
+      // Choose a random pig from the array of original pigs
+      var randomIndexBrown = Math.floor(Math.random() * originalPigBrown.length);
+      var randomIndexPink = Math.floor(Math.random() * originalPigPink.length);
+      var randomPigBrown = originalPigBrown[randomIndexBrown];
+      var randomPigPink = originalPigPink[randomIndexPink];
+
+      // Clone the random pigs
+      var clonedPigBrown = randomPigBrown.cloneNode(true);
+      clonedPigBrown.style.margin = '-1em 0 0 8em';
+      document.querySelector('.mud-two').appendChild(clonedPigBrown);
+
+      var clonedPigPink = randomPigPink.cloneNode(true);
+      clonedPigPink.style.margin = '-8em 0 0 16em';
+      document.querySelector('.mud-two').appendChild(clonedPigPink);
+
+      // Make cloned Pigs disappear after 3 seconds
+      setTimeout(function() {
+        clonedPigBrown.remove();
+        clonedPigPink.remove();
+      }, 6000);
+    })
+    .catch(error => console.error('Fetch error:', error));
+}
+
+// Call the cloneOneElement function after 7 seconds using setTimeout
+setTimeout(cloneOneElement, 7300);
 
 // make running pigs disappear after animation finished
   setTimeout(() => {
     gamePigBrown.style.visibility = 'hidden';
     gamePigPink.style.visibility = 'hidden';
-    randomCloneBrown.style.visibility = '';
     goBrown.style = "";
     goPink.style = "";
     pigBrown.style = "";
@@ -111,6 +117,45 @@ setTimeout(() => {
 
   }, 12000);
 });
+
+// Score board and input for player names
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the form
+var form = document.getElementById("player-form");
+
+// Get the close button
+var closeButton = document.getElementsByClassName("close")[0];
+
+// Get the player names container
+var playerNamesContainer = document.getElementById("player-names");
+
+// Open the modal on page load
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// Submit form event
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Get the player name
+  var playerName = document.getElementById("player-name").value;
+
+  // Add the player name to the player names container
+  playerNamesContainer.innerHTML += "<p>" + playerName + "</p>";
+
+  // Clear the player name input
+  document.getElementById("player-name").value = "";
+});
+
+// Close the modal when the close button is clicked
+closeButton.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+
 
 
 //use display none to make combinations visibilbe after splash in puddle

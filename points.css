@@ -7,16 +7,14 @@
     place-items: center;
  }
 
-/*  .col-3 {
-    height: 10em;
-    width: 10em;
-    margin-top: 6em;
- } */
+ .col-3-brown, .col-3-pink {
+    margin: 0.8em;
+ }
+
 #start {
     border-radius: 10%;
     font-size: 1em;
 }
-
 
 .nose-down {
     transform: rotate(50deg);
@@ -27,9 +25,6 @@
     right: -5em;
 }
 
-.scaled {
-    transform: scale(60%);
-}
 .sitting {
     background-color: #854836;
 }
