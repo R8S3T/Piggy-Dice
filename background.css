@@ -83,7 +83,7 @@ html, body {
 
 .grass {
     background-color: #2c786c;
-    height: 60vh;
+    height: 80vh;
     width: 100vw;
 }
 
@@ -102,7 +102,7 @@ html, body {
     height: 8.375em;
     width: 37em;
     border-radius: 50%;
-    top: -7em;
+    top: -3em;
 }
 
 .mud-one {
@@ -110,7 +110,7 @@ html, body {
     position: relative;
     height: 7.5em;
     width: 16em;
-    top: -1.875em;
+    top: -2.875em;
     left: 7.5em;
     border-radius: 50%;
 }
@@ -120,7 +120,7 @@ html, body {
     position: relative;
     height: 8.75em;
     width: 30em;
-    top: -3.44em;
+    top: -4.44em;
     left: 0.625em;
     border-radius: 50%;
 }
@@ -130,7 +130,7 @@ html, body {
 .splash {
   position: relative;
   right: 20%;
-  top: -25em;
+  top: -22em;
   opacity: 0;
 }
 
@@ -257,7 +257,7 @@ html, body {
   height: 6.25em;
   background-color: #402a23;
   left: 15em;
-  top: 1.5em;
+  top: -2em;
   transform: rotate(150deg);
 }
 

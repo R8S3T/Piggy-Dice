@@ -7,6 +7,50 @@
     place-items: center;
  }
 
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25em;
+    height: 20em;
+    align-items: center;
+    overflow-y: auto; /* make the container scrollable */
+    display: flex; /* add flexbox layout */
+    flex-direction: column; /* make the container a column */
+    justify-content: space-between; /* add spacing between elements */
+  }
+
+
+  /* adjust height of input field and button */
+  #player-form input[type="text"], #player-form button {
+    height: 3em;
+  }
+
+  #btn-enter {
+    display: none;
+}
+
+#start {
+    background-color: #ffaaa5;
+    height: 3.5em;
+    width: 3.5em;
+    border: 0.0999em solid #45171d;
+    border-radius: 100%;
+}
+  
  .col-3-brown, .col-3-pink {
     margin: 0.8em;
  }

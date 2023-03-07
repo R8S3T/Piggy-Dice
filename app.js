@@ -1,3 +1,4 @@
+/// CLONING PIGS AND ANIMATION ///
 
 // Get button to start animation 
 const button = document.getElementById('start');
@@ -19,12 +20,15 @@ const legRightBrown = document.querySelector('.leg-front-brown-ani');
 const legRightPink = document.querySelector('.leg-front-pink-ani');
 const splash = document.querySelector('.splash')
 
-
 // Start animation on button click
 button.addEventListener('click', function(e) {
   e.preventDefault();
 
+  // Hide Player window after start
+  modal.style.display = "none";
   button.disabled = true;
+
+  //Pig animation starts here
   e.target.classList.remove('animation');
   gamePigBrown.style.visibility = "visible";
   gamePigPink.style.visibility = "visible";
@@ -41,7 +45,6 @@ button.addEventListener('click', function(e) {
   legRightBrown.style.animation = "run-right 0.5s 10";
   legRightPink.style.animation = "run-right 0.5s 10";
   splash.style.animation = "fadeInOut 4.2s 6.8s";
-  
 
 // Function to fetch content from instructions.html and clone pigs into game.html
 function cloneOneElement() {
@@ -118,7 +121,9 @@ setTimeout(cloneOneElement, 7300);
   }, 12000);
 });
 
-// Score board and input for player names
+
+// SCORE BOARD AND PLAYER NAME INPUT ///
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -129,65 +134,63 @@ var form = document.getElementById("player-form");
 var closeButton = document.getElementsByClassName("close")[0];
 
 // Get the player names container
-var playerNamesContainer = document.getElementById("player-names");
+var playerNamesTable = document.getElementById("player-names-table");
 
-// Open the modal on page load
-window.onload = function() {
-  modal.style.display = "block";
-}
+// Initialize the player names array
+var playerNames = [];
 
 // Submit form event
 form.addEventListener("submit", function(event) {
   event.preventDefault();
 
   // Get the player name
-  var playerName = document.getElementById("player-name").value;
+  let playerName = document.getElementById("player-name").value;
 
-  // Add the player name to the player names container
-  playerNamesContainer.innerHTML += "<p>" + playerName + "</p>";
+  // Add the player name and points to the playerNames array
+  playerNames.push({
+    name: playerName,
+    points: 0
+  });
 
   // Clear the player name input
   document.getElementById("player-name").value = "";
+
+  // Update the player names table
+  let newRow = playerNamesTable.insertRow();
+  let cell1 = newRow.insertCell(0);
+  let cell2 = newRow.insertCell(1);
+  cell1.innerHTML = playerName;
+  cell2.innerHTML = "0";
+
+  // Check if all players have entered their names
+  let uniquePlayerNames = [...new Set(playerNames)];
+  let maxPlayers = 5;
+  if (uniquePlayerNames.length < maxPlayers) {
+    // show the modal again to allow more players to enter their names
+    modal.style.display = "block";
+  } else {
+    // Hide modal and start game
+    modal.style.display = "none";
+
+    // Display the list of player names and points
+    let playerList = "";
+    for (var i = 0; i < playerNames.length; i++) {
+      playerList += playerNames[i].name + " (" + playerNames[i].points + ")";
+      if (i < playerNames.length -1) {
+        playerList += ", ";
+      }
+    }
+    document.getElementById("player-list").innerHTML = "Players: " + playerList;
+  }
 });
+
+// Open the modal on page load
+window.onload = function() {
+  modal.style.display = "block";
+}
 
 // Close the modal when the close button is clicked
 closeButton.addEventListener("click", function() {
   modal.style.display = "none";
 });
-
-
-
-
-//use display none to make combinations visibilbe after splash in puddle
-
-
-alert(randomBrownPig)
-/*i = random möglichkeit */
-/* const i = Math.floor(Math.random() * 6); */
-/*wendet i in array an */
-/* const e = a[i];
-
-const j = Math.floor(Math.random() * 6);
-
-const sum = i + 1 + j + 1;
-
-p.innerHTML = "Du hast " + sum + " Punkte";
-
-e.style.dispaly = "block"
- */
-
-/* Add eventlistener to start animation and animation itself */
-//*****Pig combination for Points*****
-
-
-
-
-// Standing Pigs
-/* let brownPig = document.querySelector('.pig-two');
-let standing = document.querySelector('.column-stand');
-
-let copyBrown = brownPig.cloneNode(true);
-copyBrown.style.transform = "scale(40%)";
-
-standing.appendChild(copyBrown); */
 
