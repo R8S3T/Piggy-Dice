@@ -12,7 +12,10 @@ html, body {
   text-align: center;
   display: flex;
 }
- 
+
+.game-span {
+  margin-top: -5em;
+}
 /*Landscape and puddle of mud*/
 .sky {
     background-color: #8dc6ff;
@@ -143,50 +146,17 @@ html, body {
 }
 
 @keyframes fadeInOut {
-  0%{ 
-    opacity:1; 
+  0% {
+    opacity: 0;
   }
-  50% {
+  10% {
     opacity: 1;
   }
-  55% {
-    opacity: 0.7;
+  60% {
+    opacity: 1;
   }
-  59% {
-    opacity: 0.8;
-  }
-  61% {
-    opacity: 0.7;
-  }
-  65% {
-    opacity: 0.6;
-  }
-  70% {
-    opacity: 0.55;
-  }
-  73% {
-    opacity: 0.5;
-  }
-  78% {
-    opacity: 0.45;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  83% {
-    opacity: 0.35;
-  }
-  85% {
-    opacity: 0.3;
-  }
-  89% {
-    opacity: 0.25;
-  }
-  90% {
-    opacity: 0.2;
-  }
-  95% {
-    opacity: 0.1;
+  100% {
+    opacity: 0;
   }
 }
 
@@ -513,12 +483,12 @@ html, body {
 .tail::before {
   content: '';
   position: absolute;
-  left: -16px;
-  top: 20px;
-  width: 20px;
-  height: 25px;
+  left: -1em; /* -16px / 16 */
+  top: 1.25em; /* 20px / 16 */
+  width: 1.25em; /* 20px / 16 */
+  height: 1.5625em; /* 25px / 16 */
   border-radius: 50%;
-  box-shadow: 5px 2px 0px 0px #854836;
+  box-shadow: 0.3125em 0.125em 0px 0px #854836; /* 5px / 16, 2px / 16 */
   transform: rotate(95deg);
 }
 
@@ -526,14 +496,40 @@ html, body {
 .tail::after {
   content: '';
   position: absolute;
-  top: 30px;
-  left: -18px;
-  width: 20px;
-  height: 20px;
+  top: 1.875em; /* 30px / 16 */
+  left: -1.125em; /* -18px / 16 */
+  width: 1.25em; /* 20px / 16 */
+  height: 1.25em; /* 20px / 16 */
   border-radius: 50%;
-  box-shadow: -3px -1px 0px 0px #854836;
+  box-shadow: -0.1875em -0.0625em 0px 0px #854836; /* -3px / 16, -1px / 16 */
   transform: rotate(45deg);
 }
+
+.tail-pink::before {
+  content: '';
+  position: absolute;
+  left: -1em; /* -16px / 16 */
+  top: 1.25em; /* 20px / 16 */
+  width: 1.25em; /* 20px / 16 */
+  height: 1.5625em; /* 25px / 16 */
+  border-radius: 50%;
+  box-shadow: 0.3125em 0.125em 0px 0px #ffaaa5; /* 5px / 16, 2px / 16 */
+  transform: rotate(95deg);
+}
+
+/* Right hand part of tail */
+.tail-pink::after {
+  content: '';
+  position: absolute;
+  top: 1.875em; /* 30px / 16 */
+  left: -1.125em; /* -18px / 16 */
+  width: 1.25em; /* 20px / 16 */
+  height: 1.25em; /* 20px / 16 */
+  border-radius: 50%;
+  box-shadow: -0.1875em -0.0625em 0px 0px #ffaaa5; /* -3px / 16, -1px / 16 */
+  transform: rotate(45deg);
+}
+
 
 /* Keyframes animation, started in app.js */
 
@@ -617,20 +613,109 @@ html, body {
 }
 
 
-@media (min-width: 1200px) {
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
   html {
     font-size: 100%; /* Set the base font size to 8px for screens smaller than 1200px */
   }
 }
 
-@media (max-width: 1200px) {
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
   html {
     font-size: 50%; /* Set the base font size to 8px for screens smaller than 1200px */
   }
 }
 
-@media (max-width: 768px) {
+
+/* Small devices (landscape phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 767px){
   html {
     font-size: 40%; /* Set the base font size to 6.4px for screens smaller than 768px */
+  }
+}
+
+/* Very Small devices (max 600) */
+@media (max-width: 600px)  {
+  .sky {
+    height: 50vh;
+  }
+  .sun {
+    height:5.25em;
+    width:5.25em;
+    margin-left: 9.5em;
+    margin-bottom: 5.125em;
+    transform: scale(1);
+  }
+  .cloud {
+    top: 1em;
+    transform: scale(1);
+  }
+  .cloud:before {
+    top:-1.875em;
+    left:3.75em;
+    transform: scale(1);
+  }
+  .cloud:after {
+    top:-6em;
+    left:4.375em;
+    transform: scale(1);
+  }
+  .grass {
+    margin-top: -4.5em;
+    height: 100vh;
+    width: 100vw;
+  }
+  #gamePigBrown{
+    position: relative;
+    left: 3em;
+    top: 1em;
+    transform: scale(.8);
+  }
+  
+  #gamePigPink{
+    position: relative;
+    left: 1em;
+    top: 1em;
+    transform: scale(.8);
+  }
+
+  .puddle {
+    margin-right: -14em;
+    margin-top: -19em;
+    transform: scale(0.5);
+  }
+  .splash {
+   transform: scale(1);
+  }
+  @keyframes jump {
+    0%, 20%, 30%, 50%, 80%, 100% {transform: translateY(1);}
+    40% {transform: translateY(-200px);}
+      60% {transform: translateY(-200px) rotate(15deg);}
+      65% {transform: translateY(-180px) rotate(18deg);}
+      69% {transform: translateY(-150px) rotate(20deg);}
+      70% {transform: translateY(-100px) rotate(45deg);}
+      72% {transform: translateY(-30px) rotate(55deg);}
+      74% {transform: translateY(-30px) rotate(65deg);}
+      76% {transform: translateY(-40px) rotate(70deg);}
+      78% {transform: translateY(-50px) rotate(75deg);}
+      90% {transform: translateY(-100px) rotate(80deg);}
+    }
+    
+    @keyframes jump-two {
+    0%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 80%, 100% {transform: translateY(1);}
+    0%, 20%, 30%, 50%, 80%, 100% {transform: translateY(1);}
+    40% {transform: translateY(-200px);}
+      60% {transform: translateY(-200px) rotate(15deg);}
+      65% {transform: translateY(-180px) rotate(18deg);}
+      69% {transform: translateY(-150px) rotate(20deg);}
+      70% {transform: translateY(-100px) rotate(45deg);}
+      72% {transform: translateY(-30px) rotate(55deg);}
+      74% {transform: translateY(-30px) rotate(65deg);}
+      76% {transform: translateY(-40px) rotate(70deg);}
+      78% {transform: translateY(-50px) rotate(75deg);}
+      90% {transform: translateY(-100px) rotate(80deg);}
   }
 }

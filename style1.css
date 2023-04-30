@@ -43,7 +43,7 @@ h1 {
   }
 
  .top-pig-pink, .pig-two {
-    margin: 2em 0 2em 32em;
+    margin: 5em 0 2em 32em;
 } 
 
 /* PINK PIG TOP */
@@ -236,9 +236,10 @@ h1 {
     border-radius: 100%;
     position: relative;
     background: #45171d;
-    top: 15px;
-    left: 15px;
+    top: 0.9375em;
+    left: 0.9375em;
 }
+
 
 .top-ears-brown {
     display: flex;
@@ -314,12 +315,12 @@ h1 {
 .top-body-brown::before {
     content: '';
     position: absolute;
-    left: -16px;
-    top: 20px;
-    width: 20px;
-    height: 25px;
+    left: -1em; /* -16px / 16 */
+    top: 1.25em; /* 20px / 16 */
+    width: 1.25em; /* 20px / 16 */
+    height: 1.5625em; /* 25px / 16 */
     border-radius: 50%;
-    box-shadow: 5px 2px 0px 0px #854836;
+    box-shadow: 0.3125em 0.125em 0px 0px #854836; /* 5px / 16, 2px / 16 */
     transform: rotate(95deg);
   }
   
@@ -327,14 +328,15 @@ h1 {
   .top-body-brown::after {
     content: '';
     position: absolute;
-    top: 30px;
-    left: -18px;
-    width: 20px;
-    height: 20px;
+    top: 1.875em; /* 30px / 16 */
+    left: -1.125em; /* -18px / 16 */
+    width: 1.25em; /* 20px / 16 */
+    height: 1.25em; /* 20px / 16 */
     border-radius: 50%;
-    box-shadow: -3px -1px 0px 0px #854836;
+    box-shadow: -0.1875em -0.0625em 0px 0px #854836; /* -3px / 16, -1px / 16 */
     transform: rotate(45deg);
-}
+  }
+  
 
 /* Mud Buttons */
 
@@ -375,11 +377,11 @@ h1 {
 }
 
 #instruction-mud {
-    margin: -2em 3em 1em 10em;
+    margin: 2em 3em 1em 35em;
 }
 
 #start-mud {
-    margin: -2em -53em 1em 20em;
+    margin: 2em -10em 1em 20em;
 }
 
 .points-text {
@@ -392,82 +394,17 @@ h1 {
     color: #e7eaf6;
     text-align: center;
     width: 100%; 
-  }
+}
 
-  .start-text {
+.start-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-55%, -60%);
     z-index: 1;
-    font-size: 5em; /* Adjust the font size as desired */
+    font-size: 5em;
     color: #e7eaf6;
     text-align: center;
-    width: 100%; 
-  }
-
-  @media (max-width: 1200px) {
-    .heading h1 {
-        font-size: 6vw;
-    }
-
-    .heading h2 {
-        font-size: 4vw;
-    }
-
-    .heading h3 {
-        font-size: 2.5vw;
-    }
+    width: 100%;
 }
 
-@media (max-width: 992px) {
-    .col-6 {
-        height: 15em;
-        width: 15em;
-        margin: 0.8em 1em 0 1em;
-    }
-
-    .top-pig-pink, .pig-two {
-        transform: scale(60%);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .col-6 {
-        height: 12em;
-        width: 12em;
-        margin: 0.8em auto;
-    }
-
-    .top-pig-pink, .pig-two {
-        transform: scale(50%);
-    }
-}
-
-@media (max-width: 576px) {
-    .heading h1 {
-        font-size: 8vw;
-    }
-
-    .heading h2 {
-        font-size: 5vw;
-    }
-
-    .heading h3 {
-        font-size: 3vw;
-    }
-
-    .col-6 {
-        height: 10em;
-        width: 10em;
-        margin: 0.5em auto;
-    }
-
-    .top-pig-pink, .pig-two {
-        transform: scale(40%);
-    }
-}

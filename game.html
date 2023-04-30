@@ -10,52 +10,36 @@
     <title>Piggy Dice</title>
 </head>
 <body>
-    <div id="game">
+    <div id="game-container">
         <div class="sky">
             <div class="sun"></div>
             <div class="cloud"></div>
-            <!-- Modal -->
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
+            <div id="game-modal" class="modal">
                 <div class="modal-content">
-                    <div id="player-form-container">
-                        <span class="close">&times;</span>
-                        <h2 class="modal-heading">Wer spielt mit?</h2>
-                        <form id="player-form">
-                            <input type="text" id="player-name" placeholder="Name">
-                            <button id="btn-enter" type="submit">Enter</button>
-                        </form>
-                    </div>
-                    <div id="player-container">
-                        <div id="player-row-1"></div>
-                        <div id="player-row-2"></div>
-                    </div>
-                    <div id="points-table-container" style="display: none;">
-                        <table id="player-names-table" style="margin-top: 1em;">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Points</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                    <button id="all-players" style="display: none;">Alle Spieler hinzugefügt?</button>
-                    <span>
-                        <div id="player-message"></div>
-                        <button id="start" style="display: none;">Los geht's</button>
-                    </span>
-
-                    <div id="winner-container" style="display: none;">
-                        <h2 class="modal-heading">The game is over!</h2>
-                        <p id="winner-message"></p>
-                        <button id="restart">Restart</button>
-                      </div>
+                    <form id="player-form">
+                        <div class="input-group">
+                            <input type="text" id="player1" class="player-name" placeholder="Spieler 1:" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="player2" class="player-name" placeholder="Spieler 2:" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="player3" class="player-name" placeholder="Spieler 3:" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="player4" class="player-name" placeholder="Spieler 4:" />
+                        </div>
+                        <button type="submit" id="start">Los geht's</button>
+                    </form>
+                    <div id="player-message"></div>
+                    <div id="winner-message"></div>
+                    <div id="scoreboard" style="display: none"></div>
+                    <p id="modal-message" style="display:none; color: red;"></p>
+                    <button id="continue" style="display:none;">Weiter</button>
+                    <button id="new-game" style="display:none">Neues Spiel</button>
+                    <button id="exit" style="display:none">Verlassen</button>
                 </div>
             </div>
-
         <div class="grass">
                 <!-- Brown Pig running -->
             <div id="gamePigBrown">
@@ -97,7 +81,7 @@
                             <div class="ear-left ear-left-pink ear-left-pink-ani"></div>
                             <div class="ear-right ear-right-pink ear-right-pink-ani"></div>
                         </div>
-                        <div class="tail"></div>
+                        <div class="tail-pink"></div>
                         <div class="legs">
                             <div class="leg-front leg-front-pink leg-front-pink-ani">
                                 <div class="foot-front">
@@ -129,5 +113,6 @@
         </div>
     </div>
     <script src="app.js"></script>
+<!--     <script src="script.js"></script> -->
 </body>
 </html>
