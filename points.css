@@ -193,6 +193,7 @@ html body {
 
   .container-mud-buttons-points {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     position: absolute;
     bottom: 0;
