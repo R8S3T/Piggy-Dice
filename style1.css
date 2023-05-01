@@ -2,6 +2,14 @@ html, body {
     height: 100%;
     margin: 0;
   }
+  
+  html {
+    font-size: 62.5%; /* Set the base font size to 10px */
+  }
+  
+  html, body {
+    overflow: hidden;
+  }
 
 .top {
     margin-top: 10em;
@@ -411,3 +419,30 @@ h1 {
     width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    body {
+      font-size: 80%;
+    }
+    .top {
+      margin-top: 5em;
+      margin-left: 5em;
+    }
+    .container {
+      margin-bottom: 5em;
+    }
+    .heading h1 {
+      font-size: 4.5vw;
+    }
+    .heading h2 {
+      font-size: 2.5vw;
+    }
+    .heading h3 {
+      font-size: 1.5vw;
+    }
+    .col-6 {
+      margin-left: 10em;
+    }
+    .top-pig-pink, .pig-two {
+      margin: 2em 0 2em 10em;
+    } 
+  }

@@ -3,6 +3,15 @@ html, body {
   margin: 0;
 }
 
+html {
+  font-size: 100%; /* Set the base font size to 10px */
+}
+
+html, body {
+  overflow: hidden;
+}
+
+
 #game-container {
   position: absolute;
   top: 50%;
@@ -13,6 +22,7 @@ html, body {
   min-height: 100%;
   transform-origin: top left;
   transform: translate(-50%, -50%);
+  margin: auto;
 }
 
 /* Modal */
@@ -267,3 +277,42 @@ html, body {
   width: 100%; 
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 80%;
+  }
+  
+  #game-container {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+  }
+  
+  #description-box {
+    width: 100%;
+    height: auto;
+    margin: 2em 0;
+    border-width: 5px;
+  }
+  
+  .container-pigs-brown {
+    margin-top: 3em;
+  }
+  
+  .container-pigs-pink {
+    margin-top: 5em;
+  }
+  
+  .col-3-brown,
+  .col-3-pink {
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  
+  .top-pig-brown,
+  .top-pig-pink,
+  .pig-two {
+    margin: 2em 0;
+  }
+}
