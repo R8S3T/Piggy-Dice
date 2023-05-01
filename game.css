@@ -1,5 +1,10 @@
 /* BACKGROUND */
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 html {
   font-size: 62.5%; /* Set the base font size to 10px */
 }
